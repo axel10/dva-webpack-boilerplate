@@ -12,6 +12,7 @@ module.exports = merge(baseWebpackConfig, {
     output: {
         path: path.join(process.cwd(), 'dist'),
         filename: 'build.js',
+        publicPath:""
     },
     // mode: "production",
     module:{
@@ -45,7 +46,8 @@ module.exports = merge(baseWebpackConfig, {
         new HtmlWebpackPlugin({
             filename: path.join(process.cwd(), 'dist/index.html'),
             template: 'index-build.html',
-            inject: false,
+            inject: true,
+            hash:true,
             minify: {
                 removeComments: true,
                 collapseWhitespace: true,
