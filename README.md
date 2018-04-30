@@ -1,4 +1,4 @@
-mobx-react-boilerplate
+dva-webpack-boilerplate
 =====================
 
 A minimal application that combines [MobX](https://mobxjs.github.io/mobx) with [React](https://facebook.github.io/react).
