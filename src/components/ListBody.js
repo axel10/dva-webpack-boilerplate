@@ -4,10 +4,8 @@ import './ListBody.scss'
 export default class ListBody extends React.Component{
 
     removeItem(Index){
-        console.log(this.props);
         this.props.dispatch({type:'listData/fetchRemoveItem',payload:Index});
     }
-
 
     render(){
         const list = this.props.list.list;

@@ -1,5 +1,4 @@
 import * as listService from '../services/listService'
-import _ from 'lodash'
 
 export default {
 
@@ -21,7 +20,6 @@ export default {
             yield put({type: 'save', payload: data});
         },
         * fetchRemoveItem({payload}, {call, put}) {
-            console.log(_);
             const result = yield call(listService.removeListItem, payload)
             if (result) {
                 yield put({type: 'removeItem', payload: payload})
@@ -37,8 +35,6 @@ export default {
         },
 
         removeItem(state, {payload: data}) {
-            console.log(data);
-            console.log(state);
             state.list.splice(data, 1);
             return {...state}
         }
