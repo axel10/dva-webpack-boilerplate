@@ -20,7 +20,7 @@ export default {
             yield put({type: 'save', payload: data});
         },
         * fetchRemoveItem({payload}, {call, put}) {
-            const result = yield call(listService.removeListItem, payload)
+            const result = yield call(listService.removeListItem, payload);
             if (result) {
                 yield put({type: 'removeItem', payload: payload})
             }
@@ -35,7 +35,9 @@ export default {
         },
 
         removeItem(state, {payload: data}) {
-            state.list.splice(data, 1);
+            state.list = state.list.filter((item)=>{
+                return item.id !== data;
+            });
             return {...state}
         }
     },
