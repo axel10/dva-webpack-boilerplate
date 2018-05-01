@@ -9,7 +9,6 @@ export default class ListBody extends React.Component{
 
     render(){
         const list = this.props.list.list;
-        console.log(list);
         return(
             <div>
                 listBody
