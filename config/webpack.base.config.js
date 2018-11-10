@@ -9,11 +9,9 @@ module.exports = {
     output: {
         path: path.join(__dirname, 'dist'),
         filename: 'build.js',
-        publicPath: '/dist/'
+        // publicPath: path.resolve(__dirname,'../dist')
     },
     plugins: [
-        new webpack.HotModuleReplacementPlugin(),
-
     ],
     resolve: {
         extensions: ['.js', '.jsx']

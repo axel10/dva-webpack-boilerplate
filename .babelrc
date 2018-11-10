@@ -1,7 +1,7 @@
 {
   "presets": [
     "react",
-    "stage-0",
+    "stage-2",
     "env"
   ],
   "plugins": ["transform-decorators-legacy" ,"transform-runtime"]
