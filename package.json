@@ -41,6 +41,6 @@
     "dva": "^2.4.1",
     "react": "16.6.1",
     "react-dom": "16.6.1",
-    "history": "latest"
+    "history": "^4.7.2"
   }
 }
