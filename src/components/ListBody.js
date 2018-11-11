@@ -1,17 +1,34 @@
 import React from "react";
 import './ListBody.scss'
+import {connect} from 'dva'
+import myContext from '@/components/myContext'
 
-export default class ListBody extends React.Component{
+
+ class ListBody extends React.Component{
 
     removeItem(id){
         this.props.dispatch({type:'listData/fetchRemoveItem',payload:id});
     }
 
     render(){
-        const list = this.props.list.list;
+        console.log(this.props);
+        const list = this.props.list;
         return(
             <div>
                 listBody
+
+                context
+
+                <myContext.Consumer>
+                    {
+                        ({testState})=>(
+                            <div>
+                                {testState}
+                            </div>
+                        )
+                    }
+                </myContext.Consumer>
+
                 <ul className={'ul'}>
                     {list.map((item,index)=>(
                         <li key={index} onClick={this.removeItem.bind(this,item.id)}>
@@ -23,3 +40,7 @@ export default class ListBody extends React.Component{
         )
     }
 }
+
+export default connect((state)=>{
+    return state.listData
+})(ListBody)

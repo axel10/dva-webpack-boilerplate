@@ -14,10 +14,17 @@ module.exports = {
     plugins: [
     ],
     resolve: {
-        extensions: ['.js', '.jsx']
+        extensions: ['.js', '.jsx','.ts','.tsx'],
+        alias:{
+            '@':path.resolve(__dirname,'../src')
+        }
     },
     module: {
         rules: [
+            {
+                test:/\.tsx?$/,
+                use:'ts-loader'
+            },
             {
                 test: /\.jsx?$/,
                 use: ['babel-loader'],
