@@ -9,7 +9,7 @@ export default {
     },
 
     subscriptions: {
-        setup({dispatch, history}) {
+        setup({dispatch}) {
             dispatch({type: 'fetch'})
         },
     },
@@ -17,12 +17,13 @@ export default {
     effects: {
         * fetch({payload}, {call, put}) {  // eslint-disable-line
             const data = yield call(listService.fetchList);
-            yield put({type: 'save', payload: data});
+          console.log(data);
+          yield put({type: 'save', payload: data});
         },
         * fetchRemoveItem({payload}, {call, put}) {
             const result = yield call(listService.removeListItem, payload);
             if (result) {
-                yield put({type: 'removeItem', payload: payload})
+                yield put({type: 'removeItem', payload})
             }
         }
     },
@@ -30,14 +31,11 @@ export default {
     reducers: {
         save(state, {payload: {data}}) {
             state.list = data.subjects;
-
             return {...state}
         },
 
         removeItem(state, {payload: data}) {
-            state.list = state.list.filter((item)=>{
-                return item.id !== data;
-            });
+            state.list = state.list.filter((item)=>item.id !== data);
             return {...state}
         }
     },

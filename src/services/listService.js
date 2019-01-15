@@ -2,9 +2,9 @@
 import request from '../utils/request';
 
 export function fetchList() {
-    return request('/public/data.json')
+    return request('/public/data.json');
 }
 
-export function removeListItem(i) {
-    return true
+export function removeListItem() {
+    return true;
 }

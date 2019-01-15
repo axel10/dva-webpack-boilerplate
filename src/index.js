@@ -1,4 +1,5 @@
 import dva from 'dva';
+import '@babel/polyfill'
 import createHistory from 'history/createBrowserHistory'
 
 // 1. Initialize

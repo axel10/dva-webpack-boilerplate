@@ -1,8 +1,12 @@
 {
   "presets": [
-    "react",
-    "stage-2",
-    "env"
+    "@babel/preset-react",
+    [
+      "@babel/preset-env",
+      {
+        "useBuiltIns": "entry"
+      }
+    ]
   ],
-  "plugins": ["transform-decorators-legacy" ,"transform-runtime","transform-class-properties"]
+  "plugins": ["@babel/plugin-proposal-class-properties","@babel/plugin-transform-regenerator"]
 }
