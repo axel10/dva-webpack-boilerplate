@@ -2,6 +2,9 @@
   "name": "dva-webpack-boilerplate",
   "version": "2.0.0",
   "description": "Boilerplate for Dvajs + React + Webpack project with JSX, ES6 and decorator compilation",
+  "repository": {
+    "url": "https://github.com/axel10/dva-webpack-boilerplate"
+  },
   "scripts": {
     "start": "npm run dev",
     "dev": "webpack-dev-server --progress --colors --config build/webpack.dev.js",
@@ -15,13 +18,14 @@
   "license": "MIT",
   "dependencies": {
     "dva": "^2.4.1",
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
     "history": "^4.7.2",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1"
   },
   "devDependencies": {
+    "@types/react": "^16.8.4",
     "@types/react-router": "^4.4.3",
     "@types/react-router-dom": "^4.3.1",
     "@babel/polyfill": "^7.2.5",
@@ -41,8 +45,8 @@
     "less-loader": "^4.1.0",
     "style-loader": "^0.21.0",
     "ts-loader": "^5.3.0",
-    "typescript": "^3.1.6",
-    "tslint": "^5.11.0",
+    "typescript": "^3.3.3333",
+    "tslint": "^5.14.0",
     "tslint-config-prettier": "^1.14.0",
     "tslint-config-standard": "^7.1.0",
     "tslint-react": "^3.6.0",

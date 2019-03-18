@@ -6,7 +6,6 @@
       "tslint-config-prettier",
       "tslint-config-standard"
     ],
-    "jsRules": {},
     "rules": {
       "object-literal-sort-keys": false,
       "no-console":false,
@@ -18,5 +17,7 @@
       "prefer-for-of":false,
       "interface-name": false
     },
-    "rulesDirectory": []
+  "linterOptions": {
+    "exclude": ["**/*.js",".eslintrc.js"]
+  }
 }
