@@ -23,9 +23,10 @@ module.exports = merge(commonConfig, {
       to: path.resolve(__dirname, '../dist/public')
     }], { ignore: ['index.html'] }),
     new webpack.DefinePlugin({
-      ISPROD: JSON.stringify(true),
-      ISDEV: JSON.stringify(false)
-    })
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
+    }),
   ],
   mode: 'production'
 });

@@ -1,10 +1,11 @@
 import dva from 'dva';
-import '@babel/polyfill'
-import createHistory from 'history/createBrowserHistory'
+import '@babel/polyfill';
+
+const history = require('history');
 
 // 1. Initialize
 const app = dva({
-    history:createHistory()
+  history: history.createBrowserHistory()
 });
 // 2. Plugins
 // app.use({});

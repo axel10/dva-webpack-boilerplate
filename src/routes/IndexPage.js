@@ -5,7 +5,6 @@ import ListBody from '../components/ListBody';
 import myContext from '@/components/myContext';
 import TsTest from '@/components/TsTest';
 
-
 class IndexPage extends React.Component {
 
   constructor(props) {
